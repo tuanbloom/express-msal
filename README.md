@@ -32,7 +32,7 @@ const authConfig: AuthConfig = {
 }
 
 // trigger pkce auth on GET requests (iteractive users accessing UIs)
-app.get(pkceAuthenticationMiddleware(authConfig))
+app.get('*', pkceAuthenticationMiddleware(authConfig))
 // set a Bearer {token} auth header on POST request to '/graphql'
 app.post('/graphql', copySessionJwtToBearerHeader)
 ```
