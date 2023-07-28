@@ -1,12 +1,12 @@
 {
   "name": "@tuanbloom/express-msal",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
   "description": "",
   "author": "MakerX",
   "license": "MIT",
-  "main": "index.js",
-  "types": "index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "engines": {
     "node": ">=16.0"
   },
@@ -27,7 +27,8 @@
     "test": "jest --coverage --passWithNoTests",
     "lint": "eslint ./src/ --ext .ts",
     "lint:fix": "eslint ./src/ --ext .ts --fix",
-    "audit": "better-npm-audit audit"
+    "audit": "better-npm-audit audit",
+    "prepare": "npm run build"
   },
   "peerDependencies": {
     "@azure/msal-node": "*",
@@ -60,7 +61,7 @@
     "semver": "^7.5.3"
   },
   "dependencies": {
-    "@tuanbloom/node-common": "^1.0.3"
+    "@tuanbloom/node-common": "^1.0.6"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
